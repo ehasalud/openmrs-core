@@ -44,7 +44,8 @@
 						<td><openmrs:message code="Person.gender"/></td>
 						<td>
 							<openmrs:forEachRecord name="gender">
-								<input type="radio" name="addGender" id="gender-${record.key}" value="${record.key}"  onClick="clearError('gender')" /><label for="gender-${record.key}"> <openmrs:message code="Person.gender.${record.value}"/> </label>
+								<input type="radio" name="addGender" id="gender-${record.key}" value="${record.key}"  onClick="clearError('gender')" <c:if test="${record.key == 'F'}">checked</c:if>/>
+								<label for="gender-${record.key}"> <openmrs:message code="Person.gender.${record.value}"/> </label>
 							</openmrs:forEachRecord>
 							<span class="error" id="genderError"><openmrs:message code="Person.gender.required"/></span>
 						</td>
