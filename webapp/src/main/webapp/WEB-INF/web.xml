@@ -45,6 +45,10 @@
         <param-name>log4jRefreshInterval</param-name>
         <param-value>60000</param-value>
     </context-param>
+
+    <session-config>
+        <session-timeout>120</session-timeout>
+    </session-config>
 	
 	<servlet>
 		<servlet-name>showGraphServlet</servlet-name>
